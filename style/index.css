@@ -111,3 +111,67 @@ header {
     }
 }
 /* Header Responsivo */ 
+
+
+/* Sessão bem-vindo Responsivo */
+#bem-vindo {
+    display: flex;
+    align-items: center;
+    
+    flex-wrap: wrap;   
+    padding: 5rem 8vw;
+    background-color: #e7e1df;
+    white-space: pre-line;
+
+    & .coffeBrand {
+        width: 50%;
+        flex-basis: 50%;
+    }
+
+    & .bemVindoMessage {        
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;        
+        width: 50%;
+        color: #3B2416;
+
+        & p {
+            font-size: 16px;
+        }
+
+        & h2 {
+            font-size: clamp(2rem, 4vw, 4rem);
+            color: #a97744;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    #bem-vindo {
+        flex-direction: column-reverse;
+        text-align: center;
+        
+        & .coffeBrand {
+            width: 100%;
+            flex-basis: 100%;
+        }
+        
+        & .bemVindoMessage {
+            width: 100%;
+            align-items: center;
+            padding: 0;
+            
+            & p {
+                font-size: 14px;
+            }
+            
+
+            & h2 {                
+                white-space: normal;
+            }
+        }
+    }
+}
+/* Sessão bem-vindo Responsivo */
