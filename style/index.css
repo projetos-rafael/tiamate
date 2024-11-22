@@ -175,3 +175,62 @@ header {
     }
 }
 /* Sessão bem-vindo Responsivo */
+
+#valores {
+    display: flex;    
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 7rem;
+    padding: 5rem 8vw;
+    background-color: #e7e1df;
+    white-space: pre-line;
+
+    & .valoresCard{
+        display: flex;
+        flex-direction: column;
+        min-width: 250px;
+        flex: 1;
+
+        & .title {
+            display: flex;
+            align-items: center;
+            grid-gap: 1rem;
+            color: #a97744;
+        }
+
+        & p {
+            max-width: 300px;
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    #valores {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 8vw;
+        gap: 3rem;
+    }
+
+    .valoresCard{
+        align-items: center;
+        justify-content: center;        
+        flex: 1;
+
+        & .title{
+            flex-direction: column;
+
+            & h3 {
+                font-size: 22px;
+            }
+        }
+
+        & p {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
