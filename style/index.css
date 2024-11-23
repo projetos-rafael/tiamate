@@ -241,7 +241,7 @@ header {
     white-space: pre-line;
 
     & h2 {
-        font-size: clamp(2rem, 4vw, 4rem);
+        font-size: clamp(1.5rem, 4vw, 4rem);
         color: #a97744;
         font-weight: bold;
     }
@@ -257,21 +257,34 @@ header {
             z-index: 3;
             cursor: pointer;
             position: absolute;
-            width: clamp(5rem, 15vw, 16rem);
+            width: clamp(3rem, 13vw, 16rem);
         }
     
         & .thumbnail{
             z-index: 2;
             position: absolute;
             height: 100%;
+            border-radius: 10px;
             filter: brightness(0.5);
         }
     
         & .videoBrand {
-            position: relative;
-            display: ;
+            position: relative; 
+            width: 90%;
+            border-radius: 10px;    
         }
-    }
-
-   
+    }   
 }
+@media (max-width: 600px) {
+    #video-cafe {
+        
+        & .headLine {
+
+            & h2 {
+                white-space: normal;
+                text-align: center;                
+            }
+        }
+    }        
+}
+
