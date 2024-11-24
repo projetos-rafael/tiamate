@@ -372,6 +372,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
     padding: 17rem 8vw 3rem 8vw;
     background-color: #e7e1df;
     margin-top: -14rem;
@@ -395,15 +396,33 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        
+        gap: 3rem;
+
+        & .prev {
+            & span{
+                color: #fff;                
+                padding: .1rem;
+                border-radius: 100%;
+                background-color: #cf9a5a;
+            }
+        }
         
 
         & .carroselSpace {
             display: flex;
             justify-content: center;
-            align-items: center;       
-            gap: 1rem;
-            padding: 0 0 0 3rem;  
+            align-items: center;            
+            gap: 2rem;            
+        }
+
+        & .next {
+            & span{
+                color: #fff;                
+                padding: .1rem;
+                border-radius: 100%;
+                background-color: #cf9a5a;
+            }
         }
     }
 
@@ -424,15 +443,21 @@ header {
 
 @media (max-width: 768px) {
     #cardapio-carrosel {
-        justify-content: space-between;
-        overflow: hidden;
-        gap: .5rem;  
         
         & .carrosel {
+            flex-wrap: wrap;
+            gap: 2rem;            
+            & .prev {
+                order: 2;
+            }
+    
             & .carroselSpace {
-                max-width: 250px;
-                padding: 0;
-                gap: 3rem;               
+                width: 100%;
+                gap: 1rem;            
+            }
+    
+            & .next {
+                order: 2;
             }
         }
     }
