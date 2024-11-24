@@ -467,6 +467,7 @@ header {
     display: flex;    
     justify-content: center;
     align-items: stretch;    
+    position: relative;
     padding: 3rem 8vw;   
     
 
@@ -474,14 +475,16 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;       
-        flex: 1;
-        padding: 3rem;
+        width: 50%;
+        padding: 3rem 3rem 3rem 6rem;
         background-color: #3b2416;
 
         & form {
             display: flex;
             flex-direction: column;
+            flex: 1;
             gap: 1rem;
+            
             
 
             & .headLine {
@@ -589,5 +592,86 @@ header {
     .brandSide {        
         flex: 1;
         
+        
+        & img {
+            min-height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    #cadastro-franqueado {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 920px) {
+    #cadastro-franqueado {
+        
+        & .formSide {
+            position: absolute;
+            width: 80%;
+            padding: 3rem;
+            top: 25%;
+        }
+
+        & .brandSide {
+            width: 100%;
+            
+            & img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    #cadastro-franqueado {
+        
+        & .formSide {
+            position: block;
+            top: 0;
+
+            & form {
+                & .headLine {
+                    align-items: center;
+                    text-align: center;
+                    white-space: normal;
+
+                    & h3 {
+                        font-size: clamp(1rem, 6vw, 3rem);
+                    }
+                }
+                
+                & .formContent {
+                    & .adress {
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        & select {
+                            width: 100%;
+                        }
+                    }
+
+                    & button {
+                        width: 100%;
+                        padding: .5rem 0rem;
+                    }
+                }
+            }
+        }
+        
+        & .brandSide {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    #cadastro-franqueado {
+        & .formSide {
+            width: 100%;
+        }
     }
 }
